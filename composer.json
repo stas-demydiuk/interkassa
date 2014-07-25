@@ -1,0 +1,27 @@
+{
+    "name": "4you4ever/interkassa",
+    "description": "Library for Interkassa API v. 0.4 (28.03.2014)",
+    "keywords": ["interkassa"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stanislav Demydiuk",
+            "email": "s.demydiuk@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "ext-curl": "*"
+    },
+    "source": {
+        "type": "git",
+        "url": "https://github.com/4you4ever/interkassa",
+        "reference": "master"
+    },
+    "autoload": {
+        "psr-4": {
+            "interkassa\\": ""
+        }
+    },
+    "minimum-stability": "dev"
+}
