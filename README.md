@@ -8,43 +8,43 @@ Usage
 
 To execute queries to server you must create new instance of API class.
 
-```code
+```php
 $api = new interkassa\Api();
 ```
 
 Retrieve currencies list:
 
-```code
+```php
 $currencies = $api->getCurrencyList();
 ```
 
 Retrieve list of payment system for input:
 
-```code
+```php
 $items = $api->getPaySystemInputList();
 ```
 
 Retrieve list of payment system for output:
 
-```code
+```php
 $items = $api->getPaySystemOutputList();
 ```
 
 Retrieve account list
 
-```code
+```php
 $items = $api->getAccountList($user, $password);
 ```
 
 Retrieve purses list for selected account
 
-```code
+```php
 $items = $api->getAccountList($user, $password, $accountId);
 ```
 
 Search and retrieve invoices
 
-```code
+```php
 $form = new interkassa\SearchForm();
 $form->fromDate('2014-07-24 16:00:00')->toDate('2014-07-25 16:00:00')->byPurse($id);
 
@@ -53,7 +53,7 @@ $items = $api->getInvoiceList($user, $password, $accountId, $form);
 
 Search and retrieve withdraw
 
-```code
+```php
 $form = new interkassa\SearchForm();
 $form->fromDate('2014-07-24 16:00:00')->toDate('2014-07-25 16:00:00')->byPurse($id);
 
@@ -62,7 +62,7 @@ $items = $api->getWithdrawList($user, $password, $accountId, $form);
 
 Create new withdraw
 
-```code
+```php
 $wform = new interkassa\WithdrawForm();
 $wform->setAction(interkassa\WithdrawForm::ACTION_CALC);
 $wform->setCalcKey(interkassa\WithdrawForm::CALC_PAYEE_AMOUNT);
@@ -75,3 +75,12 @@ $wform->setDetails(array(
 
 $api->createWithdraw($username, $password, $account, $wform);
 ```
+
+License
+-------
+
+This library is released under the Open Source MIT license, which gives you the
+possibility to use it and modify it in every circumstance.
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
